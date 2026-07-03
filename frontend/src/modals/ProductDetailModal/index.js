@@ -15,7 +15,6 @@ const ProductDetailModal = (props) => {
             price,
             discountPercentage,
             rating,
-            stock,
             brand,
             category,
             images,

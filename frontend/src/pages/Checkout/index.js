@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Alert, Button } from "@cloudscape-design/components";
+import { Button } from "@cloudscape-design/components";
 import "./CheckoutPageStyles.css";
 import DeliveryAddressCard from "../../components/DeliveryAddressCard";
 import { Context } from "../../App";
@@ -13,7 +13,7 @@ const Checkout = () => {
     const { selectedDeliveryAddress, cartItems } = useContext(Context);
     let totalMrp = 0, discountOnMrp = 0;
 
-    const { postData, response, isLoading } = usePostRequest(apis.PLACE_ORDER);
+    const { postData, response } = usePostRequest(apis.PLACE_ORDER);
     const [orderSuccessful, setOrderSuccessful] = useState(false);
     const [finalCartItems, setFinalCartItems] = useState(cartItems ?? JSON.parse(sessionStorage.getItem(SESSION_STORAGE_KEYS.cartItems)))
     const [finalDeliveryAddress, setFinalDeliveryAddress] = useState(selectedDeliveryAddress ?? JSON.parse(sessionStorage.getItem(SESSION_STORAGE_KEYS.deliveryAddress)))

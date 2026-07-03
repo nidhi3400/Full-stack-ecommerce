@@ -18,7 +18,7 @@ export const usePostRequest = (url) => {
                 setResponse(json);
                 callback(true);
             })
-    }, [])
+    }, [url])
 
     return { postData, response, isLoading };
 }

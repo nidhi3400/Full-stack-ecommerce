@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Modal from "@cloudscape-design/components/modal";
@@ -51,6 +52,7 @@ const DeliveryAddressModal = () => {
                     <b>+ Add a new address</b>
                 </div>
                 {
+                    // eslint-disable-next-line array-callback-return
                     data?.map((item, index) => {
                         if (Object.keys(item).length !== 0 && item?.area) {
                             return <DeliveryAddressCard

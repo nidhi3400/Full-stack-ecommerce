@@ -26,6 +26,7 @@ const AddressFormModal = () => {
         else {
             setAddress(addressRow);
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [openAddressModal])
 
     const handleChange = (e) => {

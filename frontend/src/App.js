@@ -8,17 +8,17 @@ import "@cloudscape-design/global-styles/index.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
 
-import DeliveryAddressModal from './modals/DeliveryAddressModal';
-import CartSummaryModal from './modals/CartSummaryModal';
-import AddressFormModal from './modals/AddressFormModal';
+// import DeliveryAddressModal from './modals/DeliveryAddressModal';
+// import CartSummaryModal from './modals/CartSummaryModal';
+// import AddressFormModal from './modals/AddressFormModal';
 import { ADDRESS_MODAL_MODE, apis } from './constants';
 import useGetRequest from './hooks/useGetRequest';
 import AllOrders from './pages/AllOrders';
 import OrderDetailModal from './modals/OrderDetailModal';
 
-// const DeliveryAddressModal = lazy(() => import('./modals/DeliveryAddressModal'));
-// const CartSummaryModal = lazy(() => import('./modals/CartSummaryModal'));
-// const AddressFormModal = lazy(() => import('./modals/AddressFormModal'));
+const DeliveryAddressModal = lazy(() => import('./modals/DeliveryAddressModal'));
+const CartSummaryModal = lazy(() => import('./modals/CartSummaryModal'));
+const AddressFormModal = lazy(() => import('./modals/AddressFormModal'));
 
 export const Context = React.createContext(null);
 export const browserHistory = createBrowserHistory();
@@ -61,6 +61,7 @@ const App = () => {
   const handleRemoveFromCart = (event, productItem) => {
     event.stopPropagation();
     const updatedCart = [];
+    // eslint-disable-next-line array-callback-return
     cartItems.map((item) => {
       if (item?.id === productItem?.id) {
         item?.quantity !== 1 && updatedCart.push({ ...item, quantity: item.quantity - 1 });
