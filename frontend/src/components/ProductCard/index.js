@@ -22,9 +22,11 @@ const ProductCard = (props) => {
       <article onClick={() => setOpenProductDetailModal(true)} style={{ cursor: "pointer" }}>
         <img src={thumbnail} alt={title} />
         <h4>{title}</h4>
-        <p><b>Brand : </b>{brand}</p>
-        <p><b>Category : </b>{category}</p>
-        <p><b>Price : </b>Rs. {price}/- at {discountPercentage}% OFF</p>
+        {brand && <p><b>Brand : </b>{brand}</p>}
+        {category && <p><b>Category : </b>{category}</p>}
+        {price !== undefined && (
+            <p><b>Price : </b>Rs. {price}/- at {discountPercentage}% OFF</p>
+        )}
         {isItemAlreadyAddedInCart ? <div><ShoppingBagIcon className='icon' />In cart</div> : null}
       </article>
       <ProductDetailModal

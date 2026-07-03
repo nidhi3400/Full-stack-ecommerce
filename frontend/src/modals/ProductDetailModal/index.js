@@ -45,17 +45,19 @@ const ProductDetailModal = (props) => {
             <ImageSlider imageList={images} />
             <hr />
             <div className='container1'>
-                <p><b>Brand : </b>{brand}</p>
-                <p><b>Category : </b>{category}</p>
-                <p><b>Rating :
-                    <span
-                        style={(parseInt(rating) < 4)
-                            ? { color: "orange" }
-                            : { color: "green" }
-                        }>
-                        {"  "}{rating} <StarIcon style={{ height: 16, width: 16 }} />
-                    </span>
-                </b></p>
+                {brand && <p><b>Brand : </b>{brand}</p>}
+                {category && <p><b>Category : </b>{category}</p>}
+                {rating !== undefined && (
+                    <p><b>Rating :
+                        <span
+                            style={(parseInt(rating) < 4)
+                                ? { color: "orange" }
+                                : { color: "green" }
+                            }>
+                            {"  "}{rating} <StarIcon style={{ height: 16, width: 16 }} />
+                        </span>
+                    </b></p>
+                )}
             </div>
             <p><b>Description : </b>{description}</p>
             <p>Available for {price} at {discountPercentage}% OFF</p>
