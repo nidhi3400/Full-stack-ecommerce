@@ -1,4 +1,4 @@
-export const BASE_URL = "http://localhost:5111"
+export const BASE_URL = "https://full-stack-ecommerce-ky0z.onrender.com"
 
 export const apis = {
     GET_ALL_PRODUCTS: "https://dummyjson.com/products",
