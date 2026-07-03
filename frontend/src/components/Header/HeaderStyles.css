@@ -1,0 +1,41 @@
+.is-sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 2px 24px 0 rgb(0 0 0 / 15%);
+    background-color: #ffffff !important;
+    animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.container {
+    background-color: #0972d3;
+    height: 70px;
+    color: white;
+    font-weight: bold;
+    margin-top: -16px;
+    display: flex;
+    flex-direction: row;
+}
+.cartItemsCount {
+    margin-top: 25px;
+    margin-left: 82%;
+}
+.cartIconWrapper {
+    height: 30px;
+    width: 30px;
+    color: white;
+    float: right;
+    margin-top: 28px;
+    margin-right: 12px;
+    cursor: pointer
+}
+.title { 
+    padding-top: 15px;
+    padding-left: 15px;
+    margin-top: 16px;
+    color: white;
+    text-decoration: none;
+}

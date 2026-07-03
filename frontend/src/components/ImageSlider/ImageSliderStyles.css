@@ -1,0 +1,9 @@
+.imgContainer {
+    margin-left: 20%;
+    display: flex;
+}
+
+.imgContainer > img {
+    height: 150px;
+    width: 150px;
+}

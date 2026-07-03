@@ -1,0 +1,25 @@
+.mainContainer{
+    display: flex;
+    margin: 20px;
+}
+.orderWrapper {
+    /* border: 1px solid #ccc; */
+    /* box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3); */
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    width: 48%;
+    margin: 10px;
+}
+.scrollable {
+    height: 77vh;
+    overflow-y: scroll;
+}
+.priceWrapper {
+    margin-left: 50px;
+    width: 50%;
+}
+.buttonStyle {
+    margin-left: 60%;
+    display: flex;
+}

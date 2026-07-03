@@ -1,0 +1,9 @@
+.inputField { 
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 12px; 
+}
+
+.error {
+    color: red;
+}
