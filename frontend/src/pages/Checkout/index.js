@@ -4,7 +4,7 @@ import "./CheckoutPageStyles.css";
 import DeliveryAddressCard from "../../components/DeliveryAddressCard";
 import { Context } from "../../App";
 import CartItem from "../../components/CartItem";
-import { usePostRequest } from "../../hooks/common/usePostRequest";
+import { usePostRequest } from "../../hooks/usePostRequest";
 import { SESSION_STORAGE_KEYS, apis } from "../../constants";
 import AlertMessage from "../../designSystem/AlertMessage";
 import { useNavigate } from 'react-router-dom';

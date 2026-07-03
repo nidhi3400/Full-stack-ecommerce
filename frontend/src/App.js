@@ -12,7 +12,7 @@ import DeliveryAddressModal from './modals/DeliveryAddressModal';
 import CartSummaryModal from './modals/CartSummaryModal';
 import AddressFormModal from './modals/AddressFormModal';
 import { ADDRESS_MODAL_MODE, apis } from './constants';
-import useGetRequest from './hooks/common/useGetRequest';
+import useGetRequest from './hooks/useGetRequest';
 import AllOrders from './pages/AllOrders';
 import OrderDetailModal from './modals/OrderDetailModal';
 

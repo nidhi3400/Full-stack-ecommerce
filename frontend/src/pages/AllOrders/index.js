@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import useGetRequest from "../../hooks/common/useGetRequest";
+import useGetRequest from "../../hooks/useGetRequest";
 import { apis } from "../../constants";
 import { Context } from "../../App";
 

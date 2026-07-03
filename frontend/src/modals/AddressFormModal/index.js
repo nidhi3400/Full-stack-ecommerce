@@ -3,10 +3,10 @@ import Modal from "@cloudscape-design/components/modal";
 import Button from "@cloudscape-design/components/button";
 import { ADDRESS_MODAL_MODE, SESSION_STORAGE_KEYS, apis } from '../../constants';
 import { Context } from '../../App';
-import { usePostRequest } from '../../hooks/common/usePostRequest';
+import { usePostRequest } from '../../hooks/usePostRequest';
 import Input from '../../designSystem/Input';
 import { isInputValid } from '../../utils';
-import { useUpdateRequest } from '../../hooks/common/useUpdateRequest';
+import { useUpdateRequest } from '../../hooks/useUpdateRequest';
 
 const AddressFormModal = () => {
     const { openAddressModal, setOpenAddressModal, fetchData } = useContext(Context);

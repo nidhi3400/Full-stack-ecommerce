@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-const useGetAllProducts = (url) => {
+const useGetAllProducts = (url, searchText = "") => {
 
     const [isLoading, setIsLoading] = useState(true);
     const [data, setData] = useState([]);
@@ -9,7 +9,10 @@ const useGetAllProducts = (url) => {
     let pageOffset = 0, LIMIT = 30, total = -1;
 
     const fetchAllProducts = () => {
-        fetch(`${url}?limit=${LIMIT}&skip=${pageOffset * LIMIT}`)
+        const apiUrl = searchText
+            ? `https://dummyjson.com/products/search?q=${searchText}&limit=${LIMIT}&skip=${pageOffset * LIMIT}`
+            : `${url}?limit=${LIMIT}&skip=${pageOffset * LIMIT}`;
+        fetch(apiUrl)
             .then(response => {
                 return response.json();
             })
@@ -37,10 +40,13 @@ const useGetAllProducts = (url) => {
     }
 
     useEffect(() => {
+        setData([]);
+        setIsLoading(true);
         fetchAllProducts();
-        window.addEventListener("scroll", handleScroll)
-        return () => window.removeEventListener("scroll", handleScroll)
-    }, []);
+        window.addEventListener("scroll", handleScroll);
+        return () =>
+            window.removeEventListener("scroll", handleScroll);
+    }, [searchText]);
 
     return { isLoading, listOfProducts: data };
 };

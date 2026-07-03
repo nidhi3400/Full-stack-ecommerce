@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./DeliveryAddressCardStyles.css"
 import { Context } from "../../App";
 import { PencilSquareIcon, TrashIcon } from "@heroicons/react/24/solid";
-import { useDeleteRequest } from "../../hooks/common/useDeleteRequest";
+import { useDeleteRequest } from "../../hooks/useDeleteRequest";
 import { ADDRESS_MODAL_MODE, SESSION_STORAGE_KEYS, apis } from "../../constants";
 
 const DeliveryAddressCard = (props) => {
