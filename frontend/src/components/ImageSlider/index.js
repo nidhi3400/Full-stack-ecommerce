@@ -19,19 +19,23 @@ const ImageSlider = ({ imageList }) => {
 
   return (
     <div className='imgContainer'>
-      <div style={{ marginRight: '10%', marginTop: 50 }} >
-        <ArrowLeftCircleIcon
-          className='icon'
-          onClick={() => loadPrevImage()}
-        />
-      </div>
+      {imageList.length > 1 && activeIndex !== 0 && (
+        <div style={{ marginRight: '10%', marginTop: 50 }} >
+          <ArrowLeftCircleIcon
+            className='icon'
+            onClick={() => loadPrevImage()}
+          />
+        </div>
+      )}
       <img src={imageList[activeIndex]} alt="" />
-      <div style={{ marginLeft: '10%', marginTop: 50 }}>
-        <ArrowRightCircleIcon
-          className='icon'
-          onClick={() => loadNextImage()}
-        />
-      </div>
+      {imageList.length > 1 && activeIndex !== imageList.length - 1 && (
+        <div style={{ marginLeft: '10%', marginTop: 50 }}>
+          <ArrowRightCircleIcon
+            className='icon'
+            onClick={() => loadNextImage()}
+          />
+        </div>
+      )}
     </div>
   )
 }

@@ -5,7 +5,6 @@ import Button from "@cloudscape-design/components/button";
 import { Context } from '../../App';
 import ImageSlider from "../../components/ImageSlider"
 import { StarIcon } from '@heroicons/react/24/solid';
-import { DUMMY_IMAGES_LIST_FOR_SILDER } from '../../constants';
 
 const ProductDetailModal = (props) => {
     const { openModal, closeModal,
@@ -43,7 +42,7 @@ const ProductDetailModal = (props) => {
             visible={openModal}
             header={title}
         >
-            <ImageSlider imageList={images.concat(DUMMY_IMAGES_LIST_FOR_SILDER)} />
+            <ImageSlider imageList={images} />
             <hr />
             <div className='container1'>
                 <p><b>Brand : </b>{brand}</p>

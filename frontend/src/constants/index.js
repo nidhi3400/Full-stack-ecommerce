@@ -10,15 +10,6 @@ export const apis = {
     PLACE_ORDER: `${BASE_URL}/placeOrder`
 }
 
-export const DUMMY_IMAGES_LIST_FOR_SILDER = [
-    "https://cdn.dummyjson.com/product-images/2/2.jpg",
-    "https://cdn.dummyjson.com/product-images/2/3.jpg",
-    "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
-    "https://cdn.dummyjson.com/product-images/1/3.jpg",
-    "https://cdn.dummyjson.com/product-images/1/4.jpg",
-    "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
-]
-
 export const ADDRESS_MODAL_MODE = {
     ADD: "Add",
     EDIT: "Edit"

@@ -19,7 +19,7 @@ const ProductCard = (props) => {
 
   return (
     <>
-      <article key={id} onClick={() => setOpenProductDetailModal(true)}>
+      <article onClick={() => setOpenProductDetailModal(true)} style={{ cursor: "pointer" }}>
         <img src={thumbnail} alt={title} />
         <h4>{title}</h4>
         <p><b>Brand : </b>{brand}</p>

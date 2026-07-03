@@ -1,54 +1,81 @@
 .grid-container > article {
     border: 1px solid #ccc;
-    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.3);
     border-radius: 10px;
-    text-align: left;
-    cursor: pointer;
-    max-height: 390px;
+    width: 100%;
+    min-height: 390px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 16px;
+    background: white;
 }
 
 .grid-container > article:hover {
     opacity: 0.7;
 }
 
-.grid-container > article > h4, p {
-    margin-left: 30px;
+.grid-container > article img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.grid-container > article > h4,
+.grid-container > article > p {
+    margin-left: 20px;
     margin-right: 20px;
+}
+
+.grid-container > article > h4 {
+    min-height: 48px;
+    margin-top: 15px;
 }
 
 .grid-container > article > div {
     color: yellowgreen;
     font-weight: bold;
-    margin-left: 30px;
+    margin-left: 20px;
+    margin-top: auto;
+    padding-bottom: 15px;
 }
 
-.grid-container > article img, .grid-container > div {
-    width: 100%;
-    height: 40%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
+/* SHIMMER */
 
 .shimmerCardContainer {
     margin: 50px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 20px;
-    align-self: flex-start;
-    justify-self: start;
+    gap: 20px;
 }
 
 .shimmerCard {
     border: 1px solid #ccc;
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
-    cursor: pointer;
-    max-height: 390px;
-    background-color: gainsboro;
     height: 390px;
+    background: linear-gradient(
+        90deg,
+        #f0f0f0 25%,
+        #e0e0e0 50%,
+        #f0f0f0 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
 }
 
 .icon {
-    height: 30;
-    width: 30;
+    height: 30px;
+    width: 30px;
 }
